@@ -33,5 +33,7 @@ public class Bloc {
     @ToString.Exclude
     Set<Chambre> chambres = new HashSet<Chambre>();
 
+
+
 }
 
