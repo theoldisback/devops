@@ -9,6 +9,6 @@ RUN wget --no-verbose \
     --user=admin \
     --password=admin \
     -O tp-foyer-5.0.1.jar \
-    http://192.168.50.4:8081/repository/maven-releases/tn/esprit/tp-foyer/5.0.0/tp-foyer-5.0.0.jar
+    http://192.168.50.4:8081/repository/maven-releases/tn/esprit/tp-foyer/5.0.1/tp-foyer-5.0.1.jar
 
 ENTRYPOINT ["java", "-jar", "/tp-foyer-5.0.1.jar"]
