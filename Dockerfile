@@ -1,4 +1,4 @@
 FROM openjdk:8-jdk-alpine
 EXPOSE 8089
-COPY target/tp-foyer-1.0.jar tp-foyer-1.0.jar
+ADD target/tp-foyer-1.0.jar tp-foyer-1.0.jar
 ENTRYPOINT ["java","-jar","/tp-foyer-1.0.jar"]
