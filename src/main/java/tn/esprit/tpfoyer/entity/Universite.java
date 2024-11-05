@@ -11,8 +11,8 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
+// Universite entity
 public class Universite {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long idUniversite;
