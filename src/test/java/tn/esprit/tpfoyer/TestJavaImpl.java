@@ -10,7 +10,6 @@ import tn.esprit.tpfoyer.repository.FoyerRepository;
 import tn.esprit.tpfoyer.service.FoyerServiceImpl;
 
 import java.util.Optional;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -39,7 +38,7 @@ class FoyerServicelmplTest {
     }
     @Test
     void retrieveAllStockTest() {
-        when(foyerRepository.findAll()).thenReturn(Stream.of(new Foyer(), new Foyer(), new Foyer()).collect(Collectors.toList()));
+        when(foyerRepository.findAll()).thenReturn(Stream.of(new Foyer(), new Foyer(), new Foyer()).toList());
         assertEquals(3, foyerService.retrieveAllFoyers().size());
     }
 
