@@ -5,13 +5,13 @@ WORKDIR /app
 COPY . .
 
 RUN npm install
-RUN npm run build --configuration production
+RUN npm run build -- --configuration production
 
 # Step 2: Serve the Angular application
 FROM nginx:alpine
 
 # Copy the build files from the build stage to the Nginx server
-ADD --from=build /app/dist/angular-17-crud /usr/share/nginx/html
+COPY --from=build /app/dist/angular17_basic_project_setup /usr/share/nginx/html
 
 # Expose the port where Nginx will serve the app
 EXPOSE 80

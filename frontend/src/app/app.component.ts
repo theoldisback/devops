@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Employee } from './core/models/class/Employee';
+import { IEmployee } from './core/models/interface/IEmployee';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,34 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Angular 17 Crud example';
+  title = 'angular17_basic_project_setup';
+
+  employee: Employee = new Employee();
+  employee2: IEmployee = {
+    empId:0,
+    nmae:'',
+    city:''
+  };
+
+  student: any = {
+    name:'',
+    id:0,
+    city: ''
+  };
+  items: any[]  = [];
+
+  selectedItem: any;
+
+  suggestions: any[]  = ["Indai","Shrila nka","USa","APPP","Pakistan"];
+
+  
+
+  constructor() {
+    //this.student.
+   this.employee2= {
+    empId:0,
+    city:'',
+    nmae:''
+   }
+  }
 }
