@@ -29,15 +29,3 @@ services:
       }'
     stdin_open: true
     tty: true
-
-
-  frontend:
-    build:
-      context: frontend
-    ports:
-      - 80:80
-    depends_on:
-      - app-timesheet
-
-volumes:
-  db:
