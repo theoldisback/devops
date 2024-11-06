@@ -11,7 +11,7 @@ RUN npm run build -- --configuration production
 FROM nginx:alpine
 
 # Copy the build files from the build stage to the Nginx server
-COPY --from=build /app/dist/angular17_basic_project_setup /usr/share/nginx/html
+COPY --from=build ./frontend/app/dist/angular17_basic_project_setup /usr/share/nginx/html
 
 # Expose the port where Nginx will serve the app
 EXPOSE 80
