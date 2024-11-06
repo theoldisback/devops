@@ -1,5 +1,7 @@
-# Step 1: Build the Angular app
-FROM node:16 as build
+# Use Node 18 or newer
+FROM node:18 AS build
+# Change this line to Node.js 18 or higher
+
 WORKDIR /app
 COPY . .
 RUN npm install
