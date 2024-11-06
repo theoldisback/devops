@@ -11,7 +11,7 @@ RUN npm run build -- --configuration production
 FROM nginx:alpine
 
 # Copy the build files from the build stage to the Nginx server
-COPY --from=build /app/dist/poker-planning /usr/share/nginx/html
+COPY --from=build /app/dist/angular-17-crud /usr/share/nginx/html
 
 # Expose the port where Nginx will serve the app
 EXPOSE 80
