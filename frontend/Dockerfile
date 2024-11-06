@@ -5,7 +5,7 @@ FROM node:18 AS build
 WORKDIR /app
 COPY . .
 RUN npm install
-RUN npm run build --prod
+RUN npm run build -- --omit=dev
 
 # Step 2: Serve the Angular app
 FROM nginx:alpine
